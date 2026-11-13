@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>HistoryMaps</title>
+        <link rel="icon" type="image/png" href="hmap.png">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles2.css" />
+        <script type='module' src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="history-maps-page">
+        <canvas id="particles" aria-hidden="true"></canvas>
+        <div class="nav-bar">
+            <p class="boldtext">HISTORY</p>
+            <p class="crntloc cent">Location</p> 
+        </div>
+        <dialog class="dial">
+            <h1 class="boldtext sz" id="locdisplay">Bundala</h1>
+        </dialog>
+        <div class="image-boxM">
+            <div class="map-zoom-stage" id="mapZoomStage">
+                <span class="location-marker" id="locationMarker" aria-hidden="true"></span>
+                <img class='imx' id='imageM' src="hmapdark.png">
+            </div>
+        </div>
+        <br>
+        <div class="filterblock">
+            <button class="filtbutton" id="all">ALL</button>
+            <button class="filtbutton" id="cit">Cities</button>
+            <button class="filtbutton" id="lak">Lakes</button>
+            <button class="filtbutton" id="hab">Harbours</button>
+            <button class="filtbutton" id="pro">Historic</button>
+            <button class="filtbutton" id="reg">Religious</button>
+            <button class="filtbutton" id="oth">Other</button>
+            <button class="filtbutton" id="amu">Amunu</button>
+            <button class="filtbutton" id="gmd">GAME MODE</button>
+        </div>
+        <dialog class="hdial1 mapd">
+            <br>
+            <br>
+            <img class="instruc4" src="ins4.jpeg">
+            <p class="ww">The Current Location is displayed at the top. Try your best to PINPOINT It on the map!</p>
+            <img class="instruc1" src="ins2.jpeg">
+            <p class="ww">Green Circle? Great!. You Nailed it.</p>
+            <img class="instruc2" src="ins1.jpeg">
+            <p class="ww">Orange Circle? Close! but not quite.</p>
+            <img class="instruc3" src="ins3.jpeg">
+            <p class="ww">RED? Yikes. That's BAD 🥀</p>
+            <button class="conbtn">Got It!</button>
+        </dialog>
+        <button class="xbtn" id="xx">X</button>
+        <p style="font-family: montserrat; color:rgba(255,255,255,0.5); text-align: right;">© DamDam 2026</p>
+        <svg aria-hidden="true" width="0" height="0" style="position: absolute;">
+            <defs>
+                <filter id="displacementFilter" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.015 0.02"
+                        numOctaves="2"
+                        seed="3"
+                        result="noise"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="24"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                    />
+                </filter>
+            </defs>
+        </svg>
+        <template>
+            <div class="card">
+                <slot></slot>
+            </div>
+        </template>
+    </body>
+</html>

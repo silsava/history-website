@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>Sinhala</title>
+        <link rel="icon" type="image/png" href="histimg/hpic61.png">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles2.css" />
+        <script type='module' src="script2.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="sinhala-page">
+        <canvas id="particles" aria-hidden="true"></canvas>
+        <div class="nav-bar">
+            <p class="boldtext3">SINHALA</p>
+            <p class="wtxt grd-el">Extracts</p>
+        </div>
+        <div class="filterblock3 pos3">
+            <button class="filtbutton" id="all3">ALL</button>
+            <button class="filtbutton" id="bk1">T1</button>
+            <button class="filtbutton" id="bk2">T2</button>
+            <button class="filtbutton" id="bk3">T3</button>
+            <button class="filtbutton" id="fxx">Flagged</button>
+        </div>
+        <div class="sintext" id="sinbox">
+            <p class="boldtext3" id="sintext">Placeholder</p>
+        </div>
+        <br>
+        <div class="property-box3">
+            <p class="pb3" id="p9">CLICK</p>
+            <p class="pb3" id="p10">The BOX</p>
+            <p class="pb3" id="p11">To</p>
+            <p class="pb3" id="p12">START</p>
+        </div>
+        <dialog class="sdial">
+            <h1 class="boldtext info">i</h1>
+            <p class="ww">Click The Box to move on, Hover over the feilds to reveal information about the extract*</p>
+            <p class="ww">Flag an Extract by clicking the '🏳️' at the bottom and select the 'Flagged' Filter to Single them out!</p>
+            <button class="conbtn">Got It!</button>
+        </dialog>
+    </body>
+    <button class="xbtn" id="xx">🏳️</button>
+    <img class="bgsin is-active" src="iosbg/ios1.png" id="bgsinx" alt="" aria-hidden="true">
+    <img class="bgsin" src="iosbg/ios1.png" id="bgsin-next" alt="" aria-hidden="true">
+    <p style="font-family: montserrat; color:rgba(255,255,255,0.5); text-align: right;">© DamDam 2026</p>
+        <svg aria-hidden="true" width="0" height="0" style="position: absolute;">
+            <defs>
+                <filter id="displacementFilter" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.015 0.02"
+                        numOctaves="2"
+                        seed="3"
+                        result="noise"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="24"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                    />
+                </filter>
+            </defs>
+        </svg>
+        <template>
+            <div class="card">
+                <slot></slot>
+            </div>
+        </template>
+</html>

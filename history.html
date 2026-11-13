@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <title>HistoryImages</title>
+        <link rel="icon" type="image/png" href="histimg/hpic97.png">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="styles2.css" />
+        <script type='module' src="script.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+    </head>
+    <body class="history-page">
+        <canvas id="particles" aria-hidden="true"></canvas>
+        <div class="nav-bar">
+            <p class="boldtext">HISTORY</p>
+            <p class="wtxt grd-el">Images</p>
+        </div>
+        <div class="image-box" id="image_box">
+            <img id='image' src="sigma.png">
+        </div>
+        <div class="filterblock3 pos3">
+            <button class="filtbutton" id="all4">ALL</button>
+            <button class="filtbutton" id="rand">Random</button>
+            <button class="filtbutton" id="hgr10">G10</button>
+            <button class="filtbutton" id="hgr11">G11</button>
+            <button class="filtbutton" id="fxx">Flagged</button>
+        </div>
+        <div class="property-box">
+            <p class="p1 pb" id="p1">CLICK</p>
+            <p class="p2 pb" id="p2">The Image</p>
+            <p class="p4 pb" id="p3">To START</p>
+            <p class="p3 ples" id="lnum">G10-L1</p>
+        </div>
+        <dialog class="hdial1">
+            <h1 class="boldtext info">i</h1>
+            <p class="ww">Click The Image to move on, Hover over the feilds to reveal information about the picture</p>
+            <p class="ww">Flag an Image by clicking the '🏳️' at the bottom and select the 'Flagged' Filter to Single them out!</p>
+            <button class="conbtn">Got It!</button>
+        </dialog>
+    </body>
+    <button class="xbtn" id="xx">🏳️</button>
+    <p style="font-family: montserrat; color:rgba(255,255,255,0.5); text-align: right;">© DamDam 2026</p>
+        <svg aria-hidden="true" width="0" height="0" style="position: absolute;">
+            <defs>
+                <filter id="displacementFilter" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.015 0.02"
+                        numOctaves="2"
+                        seed="3"
+                        result="noise"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="24"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                    />
+                </filter>
+            </defs>
+        </svg>
+        <template>
+            <div class="card">
+                <slot></slot>
+            </div>
+        </template>
+</html>

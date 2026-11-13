@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DamDam.</title>
+    <link rel="icon" type="image/png" href="sigma.png">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <script type='module' src="script.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <canvas id="particles" aria-hidden="true"></canvas>
+    <section class='sec' id="start">
+      <h1 class="wtxt">DamDamOS</h1>
+      <div class="blurbg" id="bbg1">
+        <h1 class="dtxt">v16.1027r7</h1>
+      </div>
+      <h2 class='wtxt2'>[Stable-19d]</h2>
+    </section>
+    <div class="grdbar"></div>
+    <section class='proj' style="height: 100vh;">
+      <div class="nbg">
+        <h4 class="dtxt2 tp1">The Useful</h4>
+        <h2 class="wtxt tp1">PROJECTS.</h2>
+      </div>
+        <div class="navbutton" style="padding:1px;">
+            <form>
+              <button class='btnx ssbtn' formaction="https://damdam.lol/sinhala">
+                <h1>S</h1>
+                <p>Sinhala</p>
+              </button>
+            </form>
+            <form>
+            <form>
+              <button class='btnx hbtn1' formaction="https://damdam.lol/history">
+                <h1>H</h1>
+                <p>History Images</p>
+              </button>
+            </form>
+            <form>
+              <button type="button" class='btnx hbtn2'>
+                <h1>M</h1>
+                <p>History Maps</p>
+              </button>
+            </form>
+            <form>
+              <button class='btnx abtn' formaction="https://damdam.lol/art">
+                <h1>A</h1>
+                <p>Art Images</p>
+              </button>
+            </form>
+            <form>
+              <button class='btnx mbtn' formaction="https://mathflash.xyz">
+                <h1>X</h1>
+                <p>Math Flash</p>
+                </a>
+              </button>
+            </form>
+      </div>
+    </section>
+    <div class="grdbar"></div>
+    <section class='sec' id="about" style="height: 100vh;">
+      <div class=" nbg">
+        <h4 class="dtxt2 tp1">DamDam</h4>
+        <h2 class="wtxt tp1">DEFINITION.</h2>
+      </div>
+      <div class="grid1">
+        <div class="intro1">
+          <h1 class="wtxt aleft">[Intro]</h1>
+          <div class='grdbar3' style="margin-top:8px;"></div>
+          <div class="w8">
+            <h3 class="wtxt3 wrp">Hi There! :D</h3>
+            <h3 class="wtxt3 wrp" id="w3">I'm Damsara, Also KNOWN AS...</h3>
+            <h3 class="wtxt3 wrp">A wanna-be polymath: Part-Coder, Part-Painter AND Part-Mathematician</h3>
+            <h3 class="wtxt3 wrp">Makes the STUPIDEST Mistakes imagineable</h3>
+            <h3 class='wtxt3 wrp'></h3>
+          </div>
+        </div>
+        <div class="intro2">
+          <h1 class="wtxt aleft">[Math]</h1>
+          <div class='grdbar3' style="margin-top:8px;"></div>
+          <h1 class="dtxt3">94.50%</h1>
+          <h3 class="wtxt3" style="margin-top:-2em; color:#FFFFFF;">Hmm.. I wanted more lol</h3>
+        </div>
+      </div>
+    </section>
+    <div class="grdbar"></div>
+    <section class="sec" id="morex" style="height:100vh;">
+      <div class=" nbg">
+        <h4 class="dtxt2 tp1">Random</h4>
+        <h2 class="wtxt tp1">STATS.</h2>
+      </div>
+    </section>
+    <dialog class="aligndial">
+    <div class="slmapdial">
+      <p class="hdsl1">SL Map</p>
+      <img src="hmapdark.png" class="slmp">
+      <p class="wtxtD">112 Locations.</p>
+      <form>
+        <button class="slclose" formaction="https://damdam.lol/historymaps.html">GO!</button>
+      </form>
+    </div>
+    <div class="wrmapdial">
+      <p class="hdsl2">World Map</p>
+      <img src="hwap.png" class="wrmp">
+      <p class="wtxtD">26 Locations.</p>
+      <form>
+        <button class="slclose1" formaction="https://damdam.lol/worldmap.html">GO!</button>
+      </form>
+    </div>
+    </dialog>
+    <p style="font-family: montserrat; color:rgba(255,255,255,0.5); text-align: right;">© DamDam 2026</p>
+        <svg aria-hidden="true" width="0" height="0" style="position: absolute;">
+            <defs>
+                <filter id="displacementFilter" x="-20%" y="-20%" width="140%" height="140%">
+                    <feTurbulence
+                        type="fractalNoise"
+                        baseFrequency="0.015 0.02"
+                        numOctaves="2"
+                        seed="3"
+                        result="noise"
+                    />
+                    <feDisplacementMap
+                        in="SourceGraphic"
+                        in2="noise"
+                        scale="24"
+                        xChannelSelector="R"
+                        yChannelSelector="G"
+                    />
+                </filter>
+            </defs>
+        </svg>
+        <template>
+            <div class="card">
+                <slot></slot>
+            </div>
+        </template>
+  </body>
+</html>
